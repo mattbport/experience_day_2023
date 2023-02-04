@@ -270,8 +270,8 @@ function setup() {
   textSize(20);
   textAlign(CENTER);
   fill('yellow');
-  text('Your name', 200, 180);
-  text('Vinyl sim', 200, 235);
+  text('Vinyl', 200, 180);
+  text('Simulator', 200, 235);
   
   // Create a volume control
   vol = createSlider(0, 1, 1, 0);
