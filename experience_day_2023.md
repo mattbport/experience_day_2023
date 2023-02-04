@@ -2,8 +2,6 @@
 
 If you have any questions or comments after today, please feel free to email me at <matt.bellingham@port.ac.uk>
 
-<embed type="text/html" src="https://github.com/mattbport/experience-day-2023/tree/main/assets/CC-AED2023/presentation.htm" width="900" height="600">
-
 ----
 
 > This hands-on session, run by academic staff from the Creative Computing team, will ask you to design a computational solution to a real-world creative problem. Working together, we will review various approaches using both hardware and software before finalising a simple functional prototype. We are aware that applicants have diverse backgrounds and prior knowledge; no experience with specific platforms or languages is necessary, and templates and examples will be provided.
