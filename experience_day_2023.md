@@ -317,5 +317,3 @@ function draw(){
   amen.rate(r);
 }
 ```
-
-<iframe src="https://editor.p5js.org/mattb/full/tZY5TuB10"></iframe>
