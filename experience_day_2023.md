@@ -197,10 +197,8 @@ function setup() {
 }
 
 function canvasPressed(){
-  let r = random(0.7, 1.3);
   amen.stop();
   amen.rate(ratefader.value());
-  print('Rate is ' +r);
   amen.play();
 }
 ```
