@@ -25,7 +25,9 @@ You will want to consider whether we need a one-shot / momentary sound (short, o
 
 # Loading samples
 
-A [suitable audio file is available here](https://github.com/mattbport/experience-day-2023/raw/main/assets/amen.wav).
+A [suitable audio file is available here](https://github.com/mattbport/experience_day_2023/raw/main/assets/amen.wav).
+
+[Try this](https://github.com/mattbport/experience_day_2023/blob/main/assets/amen.wav)
 
 
 
