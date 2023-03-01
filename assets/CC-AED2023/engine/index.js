@@ -46777,7 +46777,7 @@
           a2.setAttribute("data-loaded", "true");
           let s3 = e2.getAttribute("data-background-image"), r2 = e2.getAttribute("data-background-video"), o2 = e2.hasAttribute("data-background-video-loop"), l2 = e2.hasAttribute("data-background-video-muted");
           if (s3)
-            /^data:/.test(s3.trim()) ? t2.style.backgroundImage = `url(${s3.trim()})` : t2.style.backgroundImage = s3.split(",").map((e3) => `url(${encodeURI(e3.trim())})`).join(",");
+            /^data:/.test(s3.trim()) ? t2.style.backgroundImage = `url(${s3.trim()})` : t2.style.backgroundImage = s3.split(",").map((e3) => `url(${encodeURI(e3.trim()).replace("'","%27").replace( /\(/g, '%28' ).replace( /\)/g, '%29' ).replace(" ","%20")})`).join(",");
           else if (r2 && !this.Reveal.isSpeakerNotes()) {
             let e3 = document.createElement("video");
             o2 && e3.setAttribute("loop", ""), l2 && (e3.muted = true), v && (e3.muted = true, e3.setAttribute("playsinline", "")), r2.split(",").forEach((t3) => {
@@ -48413,7 +48413,7 @@
     layout.style["font-size"] = null;
     let cells = Array.from(layout.children);
     let layoutOverflow = yield doesLayoutOverflow(layout, cells);
-    const MIN_FONT = window.matchMedia("(max-width: 600px)").matches ? 0.8 : 0.25;
+    const MIN_FONT = window.matchMedia("(max-width: 600px)").matches ? 0.25 : 0.25;
     const MAX_FONT = 1;
     let left = layoutOverflow ? MIN_FONT : 1;
     let right = layoutOverflow ? 1 : MAX_FONT;
@@ -48653,6 +48653,20 @@
   };
 
   // src/js/src/is-fully-loaded.js
+                                                                                
+    var getLinksAttributes = () =>{
+        const linksElements = document.querySelectorAll("a");
+        var links = [];
+        for (var i = 0; i < linksElements.length; i++) {
+            const linkElement = linksElements[i];
+            var href = linkElement.href;
+            var rect = linkElement.getBoundingClientRect();
+            links.push({ href: href, rect: rect });
+        }
+        return JSON.stringify(links);
+      }
+                                                                                
+                                                                                
   var isFullyLoaded = () => {
           const documentIsReady = document.readyState === "complete";
             const fontsAreLoaded = document.fonts.status === "loaded";
@@ -48751,6 +48765,7 @@
     });
   });
   window.iASpeaker = {
+          getLinksAttributes,
     isFullyLoaded,
     updateContent,
     fitSlides,
