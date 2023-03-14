@@ -8,16 +8,6 @@ If you have any questions or comments after today, please feel free to email me 
 
 ----
 
-# Quick links to editable examples
-
-1. [Basic audio file playback](https://editor.p5js.org/mattb/sketches/71G7ieto5)
-2. [Audio playback with random rate](https://editor.p5js.org/mattb/sketches/0PXNeGu6o)
-3. [Playback with rate controlled via a fader](https://editor.p5js.org/mattb/sketches/TIs2qAXfJ)
-3. [Vector test](https://editor.p5js.org/mattb/sketches/hVwodjDPy)
-4. [Record scratch simulation](https://editor.p5js.org/mattb/sketches/tZY5TuB10)
-
------
-
 # Scenario
 Create a device which mimics a vinyl 'scratch' sound, for performance with a mouse, mousepad, or tablet.
 
@@ -35,7 +25,7 @@ You will want to consider whether we need a one-shot / momentary sound (short, o
 
 # Loading samples
 
-A [suitable audio file is available here (download link)](https://github.com/mattbport/experience_day_2023/raw/main/assets/amen.wav).
+A [suitable audio file is available here (download link](https://github.com/mattbport/experience_day_2023/raw/main/assets/amen.wav).
 
 Loading samples is done via [loadSound](https://p5js.org/reference/#/p5/loadSound).
 
@@ -184,7 +174,7 @@ function playIt() {
 
 # Adding controls
 
-Adding a fader and controlling colours and text. [Click here to play](https://editor.p5js.org/mattb/sketches/TIs2qAXfJ).
+Adding a fader and controlling colours and text:
 
 ```js
 let amen, ratefader;
@@ -237,25 +227,6 @@ let t, m, d;
 t = createVector(300, 300);
 m = createVector(mouseX, mouseY);
 d = t.dist(m);
-```
-
-Try this example - the dot shows the target position. [Click here to play](https://editor.p5js.org/mattb/sketches/hVwodjDPy).
-
-```js
-function setup() {
-  createCanvas(400, 400);
-}
-
-function draw() {
-  let t, m, d, f;
-  t = createVector(300, 300);
-  m = createVector(mouseX, mouseY);
-  d = t.dist(m);
-  print(d);
-  background(200, 100, 180);
-  fill('black');
-  circle(300, 300, 10);
-}
 ```
 
 # Map
